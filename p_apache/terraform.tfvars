@@ -1,0 +1,2 @@
+environment = "sandbox"
+provisioner = "terraform"
