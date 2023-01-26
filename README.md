@@ -2,7 +2,7 @@
 Configure AWS Credentials
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
 
-Build the AMI--------------<br>
+***Build the AMI--------------***<br>
 
   1. cd ./p_apache
 
@@ -16,7 +16,7 @@ Build the AMI image:<br>
 
   5. Note/Record the AMI Image ID (this could be configured to be passed dynamically via artifacts)
 
-Build the B/G deployment groups:<br>
+***Build the B/G deployment groups--------------------***<br>
 
   1. Terraform apply
  
