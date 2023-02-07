@@ -38,6 +38,10 @@ variable "certificate_arn" {
   type = string
 }
 
-variable "instance_count" {
+variable "instance_count_blue" {
+  type = number
+}
+
+variable "instance_count_green" {
   type = number
 }

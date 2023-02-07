@@ -1,9 +1,9 @@
 resource "aws_autoscaling_group" "bluegreen" {
   name                      = "asg-${var.blue_or_green}"
   vpc_zone_identifier       = [aws_subnet.primary.id, aws_subnet.secondary.id]
-  desired_capacity          = 0
-  max_size                  = 0
-  min_size                  = 0
+  desired_capacity          = 2
+  max_size                  = 2
+  min_size                  = 2
   target_group_arns         = [aws_alb_target_group.group.arn]
   health_check_grace_period = 180
 
@@ -38,7 +38,7 @@ resource "aws_alb_target_group" "group" {
   port     = 80
   protocol = "HTTP"
   vpc_id   = var.vpc_id
-  protocol_version = "HTTP2"
+  #protocol_version = "HTTP1"
 
   stickiness {
     type = "lb_cookie"
